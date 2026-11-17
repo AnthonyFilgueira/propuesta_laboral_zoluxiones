@@ -1,0 +1,58 @@
+name: Audios de la propuesta
+on:
+  push:
+    branches: [main]
+    paths: ['index.html']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: audios
+  cancel-in-progress: false
+jobs:
+  audios:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install edge-tts mutagen
+      - name: Generar MP3 de los pasos que cambiaron
+        run: |
+          python - <<'PY'
+          import re, json, html, hashlib, os, asyncio, edge_tts
+          from mutagen.mp3 import MP3
+          VOZ = os.environ.get('VOZ') or ('en-US-AndrewNeural' if '<html lang="en"' in open('index.html').read() else 'es-MX-JorgeNeural')
+          s = open('index.html', encoding='utf-8').read()
+          pasos = re.findall(r'<section class="step" data-paso="(\d+)" data-t="([^"]*)"[^>]*?data-say="([^"]*)"', s)
+          os.makedirs('audio', exist_ok=True)
+          viejo = {}
+          if os.path.exists('audio/secciones.json'):
+              try: viejo = {x['id']: x for x in json.load(open('audio/secciones.json'))}
+              except Exception: viejo = {}
+          nuevo = []
+          async def gen(texto, ruta):
+              await edge_tts.Communicate(texto, VOZ).save(ruta)
+          for n, titulo, say in pasos:
+              texto = html.unescape(say)
+              sid = f'sec-{int(n):02d}'
+              h = hashlib.sha1((VOZ + texto).encode()).hexdigest()[:12]
+              ruta = f'audio/{sid}.mp3'
+              if viejo.get(sid, {}).get('hash') != h or not os.path.exists(ruta):
+                  asyncio.run(gen(texto, ruta)); print('generado', sid)
+              nuevo.append({'id': sid, 'titulo': html.unescape(titulo), 'caracteres': len(texto),
+                            'segundos': round(MP3(ruta).info.length, 1), 'hash': h})
+          for f in os.listdir('audio'):
+              if f.endswith('.mp3') and f[:-4] not in {x['id'] for x in nuevo}:
+                  os.remove(os.path.join('audio', f))
+          json.dump(nuevo, open('audio/secciones.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
+          print('total s', round(sum(x['segundos'] for x in nuevo), 1))
+          PY
+      - name: Guardar audios
+        run: |
+          git config user.name "Anthony Filgueira"
+          git config user.email "afilgueira200@gmail.com"
+          git add audio
+          git diff --cached --quiet || git commit -m "Audios [skip ci]"
+          git push

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Anthony Filgueira para Zoluxiones</title>
+<script>document.documentElement.dataset.theme='dark';</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--bg2:#f3f4f5;--txt:#1E1E1E;--sub:#4b5056;--line:#d6d9dc;--fig:#1E1E1E;--link:#1E1E1E;--pend:#d6d9dc;--cian:#00B4E0;--onc:#1E1E1E;--hdr:58px;--dock:0px;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1E1E1E;--bg2:#2a2a2a;--txt:#f4f6f7;--sub:#b7c0c6;--line:#3d3d3d;--fig:#00B4E0;--link:#7DD4F0;--pend:#4a4a4a;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#1E1E1E;--bg2:#2a2a2a;--txt:#f4f6f7;--sub:#b7c0c6;--line:#3d3d3d;--fig:#00B4E0;--link:#7DD4F0;--pend:#4a4a4a;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--txt);font:17px/1.6 Inter,system-ui,sans-serif;overflow-wrap:anywhere;padding-bottom:calc(var(--dock) + env(safe-area-inset-bottom))}
+a{color:var(--link);text-decoration-color:var(--cian);text-decoration-thickness:2px;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--cian);outline-offset:2px;border-radius:6px}
+button{font:inherit;color:inherit;cursor:pointer}
+.top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .in{display:flex;align-items:center;gap:12px;min-height:var(--hdr);padding:0 16px;max-width:1440px;margin:0 auto}
+.top img{width:32px;height:32px;flex:none;margin:0 4px}
+.where{min-width:0;flex:1;font:600 15px/1.3 Poppins,sans-serif}
+.where small{display:block;font:500 13px Inter,sans-serif;color:var(--sub)}
+.tb{min-height:44px;min-width:44px;padding:0 14px;border:1px solid var(--line);border-radius:999px;background:var(--bg2);font-weight:600;font-size:14px;display:inline-flex;align-items:center;justify-content:center;gap:6px;flex:none}
+.tb.prim{background:var(--cian);color:var(--onc);border-color:var(--cian)}
+.tb:disabled{opacity:.4;cursor:default}
+.prog{display:grid;grid-template-columns:repeat(var(--n),1fr);gap:3px;padding:0 16px 8px;max-width:1440px;margin:0 auto}
+.prog i{height:5px;border-radius:3px;background:var(--pend)}
+.prog i.hecho{background:var(--cian);opacity:.55}
+.prog i.actual{background:var(--cian);height:7px;margin-top:-1px}
+.wrap{max-width:1440px;margin:0 auto;padding:0 16px}
+.map{display:none}
+.map ol,.sheet ol{list-style:none;padding:0;display:grid;gap:4px}
+.map button,.sheet button.it{width:100%;text-align:left;background:none;border:0;border-radius:12px;padding:10px 12px;display:grid;grid-template-columns:28px 1fr;gap:2px 10px;min-height:44px}
+.map .n,.sheet .n{grid-row:span 2;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font:600 13px Poppins,sans-serif}
+.map b,.sheet b{font:600 15px Poppins,sans-serif}
+.map span.s,.sheet span.s{font-size:13.5px;color:var(--sub);line-height:1.4}
+.map li.pend b,.sheet li.pend b{color:var(--sub);font-weight:600}
+.map li.visto .n,.sheet li.visto .n{background:var(--cian);border-color:var(--cian);color:var(--onc)}
+.map li.actual button,.sheet li.actual button{background:var(--bg2);opacity:1;box-shadow:inset 3px 0 0 var(--cian)}
+.map li.actual .n,.sheet li.actual .n{border-color:var(--cian);border-width:2.5px}
+.map button:hover,.sheet button.it:hover{background:var(--bg2)}
+main{min-width:0;padding:28px 0 40px}
+.step[hidden]{display:none}
+.step.on{animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.step>*{max-width:68ch}
+.step>.wide{max-width:none}
+.fact{font:700 clamp(46px,9vw,96px)/1 Poppins,sans-serif;color:var(--fig);letter-spacing:-.02em;margin-bottom:14px}
+.fact::after{content:"";display:block;width:72px;height:6px;border-radius:3px;background:var(--cian);margin-top:14px}
+h1{font:700 clamp(36px,6.5vw,72px)/1.06 Poppins,sans-serif;letter-spacing:-.02em;margin-bottom:18px}
+h1 s{text-decoration-color:var(--cian);text-decoration-thickness:6px;color:var(--sub)}
+h2{font:700 clamp(26px,3.6vw,40px)/1.15 Poppins,sans-serif;margin-bottom:14px}
+h1:focus,h2:focus{outline:none}
+.lead{font-size:clamp(17px,1.5vw,19px);color:var(--sub)}
+.lead b{color:var(--txt)}
+.lead+.lead{margin-top:12px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:22px;max-width:820px!important}
+.stats div{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.stats b{display:block;font:700 26px/1.15 Poppins,sans-serif}
+.stats span{font-size:14px;color:var(--sub)}
+.estado{margin-top:14px;display:inline-block;border-left:4px solid var(--cian);padding:6px 12px;background:var(--bg2);border-radius:0 10px 10px 0;font-size:15px}
+.estado b{font-weight:600}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:22px;max-width:900px!important}
+.cards div{background:var(--bg2);border:1px solid var(--line);border-top:4px solid var(--cian);border-radius:14px;padding:16px 18px}
+.cards b{display:block;font:600 17px Poppins,sans-serif;margin-bottom:4px}
+.cards span{color:var(--sub);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;list-style:none;padding:0;max-width:900px!important}
+.chips li{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:14.5px;background:var(--bg2)}
+.links{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 18px}
+.sigue{margin-top:36px;max-width:820px!important;display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}
+.sigue .card{flex:1 1 280px;border:2px solid var(--cian);border-radius:18px;padding:18px 20px;background:var(--bg2);display:grid;gap:6px}
+.sigue .k{font-size:14px;color:var(--sub);font-weight:500}
+.sigue .t{font:700 22px/1.2 Poppins,sans-serif}
+.sigue .d{color:var(--sub);font-size:15px}
+.sigue .card .tb{justify-self:start;margin-top:6px}
+.sigue .ant{background:none}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--bg);border-top:1px solid var(--line);padding:8px 10px calc(8px + env(safe-area-inset-bottom));display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:8px}
+.dock .tb{min-height:48px}
+.dock #dNext{justify-content:flex-start;text-align:left;min-width:0;overflow:hidden}
+.dock #dNext{flex-direction:column;align-items:flex-start;gap:0;line-height:1.2}.dock #dNext span{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dock #dNext .l2{font-size:12.5px;font-weight:500;color:var(--sub)}
+.cargando::after{content:"";width:14px;height:14px;border-radius:50%;border:2px solid currentColor;border-right-color:transparent;animation:gira .8s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+.sheet{border:0;padding:0;width:100%;max-width:100%;margin:auto 0 0;max-height:80vh;border-radius:20px 20px 0 0;background:var(--bg);color:var(--txt)}
+.sheet::backdrop{background:rgba(0,0,0,.5)}
+.sheet .hd{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 6px;position:sticky;top:0;background:var(--bg)}
+.sheet .hd b{font:600 17px Poppins,sans-serif}
+.sheet ol{padding:4px 10px calc(16px + env(safe-area-inset-bottom))}
+.hide-m{display:none!important}
+@media (min-width:1024px){
+ .dock,#bPasos{display:none}
+ .hide-m{display:inline-flex!important}
+ .wrap{display:grid;grid-template-columns:310px minmax(0,1fr);gap:48px}
+ .map{display:block;position:sticky;top:calc(var(--hdr) + 14px);align-self:start;max-height:calc(100vh - var(--hdr) - 28px);overflow-y:auto;padding:24px 0}
+ main{padding:44px 0 64px}
+}
+@media (max-width:1023px){:root{--dock:68px}}
+@media (max-width:420px){.top .where small{display:none}.tb.th span{display:none}.top .in{gap:8px}}
+@media (prefers-reduced-motion:reduce){.step.on{animation:none}.cargando::after{animation:none}}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="in">
+  <img src="assets/innodite.svg" width="32" height="32" alt="Innodite">
+  <div class="where" aria-live="polite"><span id="wPaso">Paso 1 · Inicio</span><small>Anthony Filgueira · Ingeniero backend, CTO de Innodite</small></div>
+  <button class="tb prim hide-m" id="hListen" type="button">▶ Escuchar</button>
+  <button class="tb th" id="bTema" type="button" aria-label="Cambiar a modo oscuro"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg> <span>Modo oscuro</span></button>
+  <button class="tb" id="bPasos" type="button" aria-haspopup="dialog">Pasos</button>
+ </div>
+ <div class="prog" id="prog" aria-hidden="true"></div>
+</header>
+
+<div class="wrap">
+<nav class="map" aria-label="Los pasos"><ol id="mapList"></ol></nav>
+<main id="deck">
+
+<section class="step" data-paso="1" data-t="Inicio" data-sub="Quién soy y por qué este rol" data-dur="22" data-say="Hola, Stefanie. Soy Anthony Filgueira, ingeniero de software backend en Lima y fundador y C T O de Innodite. Buscan a alguien que integre servicios y agentes de I A con sistemas reales. Eso hago todos los días: conecto modelos, agentes y A P Is con sistemas en producción. En los siguientes pasos les muestro dónde.">
+ <h1 tabindex="-1">Conecto agentes y servicios de IA con sistemas reales.</h1>
+ <p class="lead">Soy <b>Anthony Filgueira</b>, ingeniero de software backend en Lima, con <b>más de 10 años</b> integrando sistemas, y fundador y CTO de <b>Innodite</b>.</p>
+ <p class="lead">10 pasos cortos, cada uno con audio. Usa ← → para avanzar.</p>
+</section>
+
+<section class="step" data-paso="2" data-t="Encaje" data-sub="Lo que piden, y dónde lo demuestro" data-dur="42" data-say="Lo que piden, uno por uno. Titulado y más de diez años en backend e integración. I A integrada en proyectos reales: agentes y servidores M C P propios, un modelo de imágenes y verificación de identidad en producción. Lenguajes: Python y JavaScript, además de P H P. Integración REST, SOAP con XML, JSON y webhooks. Bases SQL y NoSQL. OAuth2, tokens y manejo de secretos. Git, Docker y pruebas automatizadas. Y observabilidad con Sentry y alertas de errores. La modalidad híbrida, dos días a la semana, me queda perfecta: vivo en Lima.">
+ <div class="fact">+10 años</div>
+ <h2 tabindex="-1">Lo que piden, y dónde lo demuestro</h2>
+ <div class="cards wide">
+ <div><b>IA en proyectos reales</b><span>Agentes y servidores MCP propios, modelo de imágenes y verificación de identidad en producción. Pasos 3 y 4.</span></div>
+ <div><b>Lenguajes</b><span>Python y JavaScript, además de PHP/Laravel como base.</span></div>
+ <div><b>REST, SOAP/XML, JSON, webhooks</b><span>Servicio SOAP que recibía XML de un proveedor de hoteles; webhooks en mis productos. Paso 5.</span></div>
+ <div><b>SQL y NoSQL</b><span>MySQL, PostgreSQL, MongoDB y Redis.</span></div>
+ <div><b>OAuth2, tokens y secretos</b><span>OAuth2 con Passport, doble factor y peticiones firmadas. Paso 6.</span></div>
+ <div><b>Git, Docker, pruebas, observabilidad</b><span>En todos mis proyectos; errores monitoreados con Sentry y alertas.</span></div>
+ </div>
+</section>
+
+<section class="step" data-paso="3" data-t="Agentes de IA" data-sub="Agentes conectados a sistemas y datos" data-dur="32" data-say="Agentes de I A conectados a sistemas. Construí servidores M C P propios para que mis agentes lean y actúen sobre mis sistemas, y un bus de mensajes en Cloudflare Workers con autenticación por secreto, por el que se coordinan agentes en distintas máquinas. Trabajo con hasta catorce agentes en paralelo, gobernados por treinta y cuatro skills, sesenta y nueve hooks y ciento catorce reglas.">
+ <div class="fact">MCP propios</div>
+ <h2 tabindex="-1">Agentes conectados a sistemas y datos</h2>
+ <div class="cards wide">
+ <div><b>Servidores MCP propios</b><span>Mis agentes leen y actúan sobre mis sistemas a través de conectores propios.</span></div>
+ <div><b>Bus entre agentes</b><span>Cloudflare Workers + D1 + webhooks, con autenticación por secreto.</span></div>
+ <div><b>Gobernanza</b><span>Hasta 14 agentes en paralelo con 34 skills, 69 hooks y 114 reglas.</span></div>
+ </div>
+</section>
+
+<section class="step" data-paso="4" data-t="IA en producción" data-sub="Servicios de IA integrados en productos" data-dur="26" data-say="Servicios de I A en producción. Integré un modelo de generación de imágenes para que un cliente suba la foto de su carro y lo vea en otro color, sin alterar el diseño del vehículo. Y en una plataforma de remesas integré verificación facial de identidad con un proveedor externo, con sus webhooks de resultado.">
+ <div class="fact">IA + identidad</div>
+ <h2 tabindex="-1">Servicios de IA integrados en productos</h2>
+ <div class="cards wide">
+ <div><b>Modelo de imágenes</b><span>El cliente sube la foto de su carro y lo ve en otro color, sin alterar el diseño.</span></div>
+ <div><b>Verificación de identidad</b><span>Validación facial con un proveedor externo y webhooks de resultado.</span></div>
+ </div>
+</section>
+
+<section class="step" data-paso="5" data-t="Interoperabilidad" data-sub="Conectores y adaptadores" data-dur="30" data-say="Conectores y adaptadores. En LimaTours construí el servicio que recibía los mensajes SOAP en XML de un proveedor externo de hoteles: los leía, los transformaba y los registraba en la base de datos. En Geatel escribí en Python un driver para relojes biométricos que nadie había conectado, que alimenta el E R P. Si un sistema habla distinto, construyo el adaptador.">
+ <div class="fact">SOAP · Python</div>
+ <h2 tabindex="-1">Conectores y adaptadores</h2>
+ <div class="cards wide">
+ <div><b>SOAP / XML</b><span>Recibía mensajes SOAP de un proveedor de hoteles, los transformaba y registraba (LimaTours).</span></div>
+ <div><b>Python + hardware</b><span>Driver para relojes biométricos ZKTeco que alimenta el ERP (Geatel).</span></div>
+ </div>
+</section>
+
+<section class="step" data-paso="6" data-t="Seguridad" data-sub="Autenticación, autorización y secretos" data-dur="26" data-say="Autenticación y secretos. OAuth2 con Passport y doble factor en un E R P multiempresa, con permisos por rol y por sede. En una app de remesas, peticiones firmadas con una llave guardada en el chip seguro del teléfono y verificadas en el servidor. Y avisos de acceso sospechoso, preguntando al usuario si fue él.">
+ <div class="fact">OAuth2 · 2FA</div>
+ <h2 tabindex="-1">Autenticación, autorización y secretos</h2>
+ <div class="cards wide">
+ <div><b>OAuth2 y 2FA</b><span>Passport y doble factor; permisos por rol y por sede.</span></div>
+ <div><b>Peticiones firmadas</b><span>Llave en el chip seguro del teléfono, verificada en el servidor.</span></div>
+ <div><b>Accesos</b><span>Aviso de acceso sospechoso: le pregunto al usuario si fue él.</span></div>
+ </div>
+</section>
+
+<section class="step" data-paso="7" data-t="Calidad" data-sub="Pruebas, errores y documentación" data-dur="26" data-say="Calidad y observabilidad. Pruebas automatizadas en todos mis productos, con más de mil setecientos archivos de prueba; setecientas pruebas al refactorizar un módulo crítico. Errores y consultas lentas monitoreados con Sentry y alertas por cola. Y documentación técnica de cada módulo, con especificación antes del código.">
+ <div class="fact">+1.700 pruebas</div>
+ <h2 tabindex="-1">Pruebas, errores y documentación</h2>
+ <p class="lead"><b>Más de 1.700 archivos de prueba</b> en mis productos; 700 pruebas al refactorizar un módulo crítico. Errores y consultas lentas monitoreados con <b>Sentry</b> y alertas. Especificación y documentación antes del código.</p>
+</section>
+
+<section class="step" data-paso="8" data-t="Tecnología nueva" data-sub="Cómo integro lo que no conozco" data-dur="30" data-say="Lo que no conozco, lo integro. Como especialista backend, integrar tecnologías nuevas es mi especialidad, y lo hago con un método: investigo, armo una propuesta y la discuto con el equipo; construyo una prueba de concepto, la presento funcionando con sus pruebas, y el equipo decide. Si no convence, mejoro la propuesta.">
+ <div class="fact">Prueba → decisión</div>
+ <h2 tabindex="-1">Cómo integro lo que no conozco</h2>
+ <div class="cards wide">
+ <div><b>1. Investigo</b><span>Documentación, alternativas y riesgos.</span></div>
+ <div><b>2. Propongo</b><span>Una solución práctica, discutida con el equipo.</span></div>
+ <div><b>3. Pruebo</b><span>Prueba de concepto funcionando, con sus pruebas automatizadas.</span></div>
+ <div><b>4. El equipo decide</b><span>Si no convence, mejoro la propuesta.</span></div>
+ </div>
+</section>
+
+<section class="step" data-paso="9" data-t="Productos" data-sub="Lo que he construido y en cuánto tiempo" data-dur="40" data-say="Lo que he construido. En noventa y tres días, del catorce de agosto al quince de noviembre de este año, hice dos mil setecientos dieciocho commits en seis repositorios: construí desde cero la Suite Innodite, Potenciate, Trayecta y Organízate, y en paralelo avancé Rinde y Cambios Jotta. Potenciate, una plataforma de microcréditos con setenta y tres módulos, la desarrollé en ochenta y cinco días y hoy busca inversión. La Suite, la base de todos mis productos, en cuarenta y un días. Trayecta tiene su app Android aprobada en Google Play. Rinde, con sesenta y un módulos, está en validación con el cliente. Cambios Jotta, para un cliente, tiene su app en Google Play, y la empecé sin experiencia previa en React Native. Y para Geatel diseñé el ERP Neocenter, de la idea a producción.">
+ <div class="fact">93 días</div>
+ <h2 tabindex="-1">Lo que he construido, y en cuánto tiempo</h2>
+ <p class="lead">Del 14 de agosto al 15 de noviembre de 2026: <b>2.718 commits en 6 repositorios</b>. Desde cero, la Suite Innodite, Potenciate, Trayecta y Organízate; en paralelo, Rinde y Cambios Jotta.</p>
+ <div class="cards wide">
+ <div><b>Potenciate · propio</b><span>Microcréditos. 73 módulos, 341 commits, construido en 85 días. Desarrollado; buscando inversión.</span></div>
+ <div><b>Trayecta · propio</b><span>Postular desde un solo perfil. 33 módulos, 486 commits, desde el 14 de agosto. App Android aprobada en Google Play.</span></div>
+ <div><b>Organízate · propio</b><span>47 módulos, 465 commits, del 24 de septiembre al 14 de octubre. En rediseño.</span></div>
+ <div><b>Rinde · propio</b><span>Nace de un ERP que hice hacia 2015 y el cliente sigue usando. 61 módulos, 192 commits. En validación con el cliente.</span></div>
+ <div><b>Suite Innodite · propia</b><span>La base de todos: 58 componentes y 23 módulos, 731 commits, en 41 días.</span></div>
+ <div><b>Cambios Jotta · para un cliente</b><span>Remesas Perú–Venezuela. 44 módulos, 795 commits en 2026. App 1.1.1 en Google Play; la empecé sin experiencia previa en React Native.</span></div>
+ <div><b>Neocenter · para Geatel</b><span>ERP diseñado de la idea a producción: 16 de 25 módulos y más del 85 % de los commits, más el driver ZKTeco.</span></div>
+ </div>
+</section>
+
+<section class="step" data-paso="10" data-t="Cierre" data-sub="Disponibilidad" data-dur="18" data-say="Gracias por su tiempo. Vivo en Lima, la modalidad híbrida me queda perfecta y tengo disponibilidad inmediata. Me encantaría conocer más del cliente. Soy Anthony Filgueira.">
+ <h1 tabindex="-1">Gracias. Disponible de inmediato.</h1>
+ <p class="lead">Vivo en Lima, la modalidad <b>híbrida</b> me queda perfecta y tengo <b>disponibilidad inmediata</b>. Me encantaría conocer más del cliente.</p>
+ <p class="lead">Anthony Filgueira · <a href="https://www.linkedin.com/in/afilgueira" target="_blank" rel="noopener">linkedin.com/in/afilgueira</a> · <a href="https://github.com/Innodite/laravel-module-maker" target="_blank" rel="noopener">laravel-module-maker</a></p>
+</section>
+
+</main>
+</div>
+
+<nav class="dock" aria-label="Controles del paso">
+ <button class="tb" id="dPrev" type="button" aria-label="Paso anterior">←</button>
+ <button class="tb prim" id="dListen" type="button">▶ Escuchar</button>
+ <button class="tb" id="dNext" type="button"><span class="l1">Siguiente →</span><span class="l2"></span></button>
+</nav>
+
+<dialog class="sheet" id="sheet" aria-label="Los pasos">
+ <div class="hd"><b id="sheetT">Los pasos</b><button class="tb" id="sClose" type="button" aria-label="Cerrar">✕</button></div>
+ <ol id="sheetList"></ol>
+</dialog>
+
+<script>
+(function(){
+if('scrollRestoration' in history)history.scrollRestoration='manual';
+const S=[...document.querySelectorAll('.step')],N=S.length,$=id=>document.getElementById(id);
+const prog=$('prog'),mapL=$('mapList'),shL=$('sheetList'),sheet=$('sheet');
+const visto=new Set();let i=0,playing=false,pending=null,sheetPushed=false,loadT=null,timer=null;
+const fmt=s=>{s=Math.round(+s||0);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')};
+S.forEach(()=>prog.appendChild(document.createElement('i')));prog.style.setProperty('--n',N);$('sheetT').textContent='Los '+N+' pasos';
+function item(k){const s=S[k],li=document.createElement('li'),b=document.createElement('button');b.type='button';b.className='it';
+ b.innerHTML='<span class="n"></span><b></b><span class="s"></span>';b.querySelector('b').textContent=s.dataset.t;b.querySelector('.s').textContent=s.dataset.sub;li.appendChild(b);return [li,b]}
+S.forEach((s,k)=>{const [a,ba]=item(k);ba.onclick=()=>{stopA();go(k,true)};mapL.appendChild(a);const [c,bc]=item(k);bc.onclick=()=>{pending=k;closeSheet()};shL.appendChild(c);
+ const w=document.createElement('div');w.className='sigue';
+ if(k<N-1){const n=S[k+1];w.innerHTML='<div class="card"><span class="k">Sigue · Paso '+(k+2)+' de '+N+'</span><span class="t"></span><span class="d"></span><span class="k du"></span><button class="tb prim" type="button">Siguiente →</button></div>';
+  w.querySelector('.t').textContent=n.dataset.t;w.querySelector('.d').textContent=n.dataset.sub;w.querySelector('.card .tb').onclick=()=>go(k+1,true)}
+ else{w.innerHTML='<div class="card"><span class="k">Fin · '+N+' pasos</span><span class="t">Gracias por su tiempo</span><button class="tb prim" type="button">Volver al inicio</button></div>';w.querySelector('.card .tb').onclick=()=>{stopA();go(0,true)}}
+ if(k>0){const p=document.createElement('button');p.type='button';p.className='tb ant';p.textContent='← Anterior';p.onclick=()=>go(k-1,true);w.appendChild(p)}
+ s.appendChild(w)});
+function render(){
+ S.forEach((s,k)=>{const du=s.querySelector('.sigue .du');if(du&&S[k+1])du.textContent='Audio de '+fmt(S[k+1].dataset.dur)});
+ [...prog.children].forEach((e,k)=>e.className=k===i?'actual':visto.has(k)?'hecho':'');
+ [mapL,shL].forEach(L=>[...L.children].forEach((li,k)=>{li.className=k===i?'actual':visto.has(k)?'visto':'pend';const b=li.querySelector('button');if(k===i)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');li.querySelector('.n').textContent=(visto.has(k)&&k!==i)?'✓':k+1}));
+ $('wPaso').textContent='Paso '+(i+1)+' de '+N+' · '+S[i].dataset.t;
+ $('dPrev').disabled=i===0;const nx=$('dNext');nx.disabled=i===N-1;nx.querySelector('.l1').textContent=i<N-1?'Siguiente →':'Fin';nx.querySelector('.l2').textContent=i<N-1?S[i+1].dataset.t:'';
+ document.title='Paso '+(i+1)+' · '+S[i].dataset.t+' · Anthony Filgueira para Zoluxiones';
+}
+fetch('audio/secciones.json').then(r=>r.ok?r.json():null).then(j=>{if(!Array.isArray(j))return;j.forEach(e=>{const m=/(\d+)/.exec(e.id||'');const sec=m&&S[+m[1]-1];if(sec&&e.segundos)sec.dataset.dur=e.segundos});render()}).catch(()=>{});
+function go(k,push,keepAudio){k=Math.max(0,Math.min(N-1,k));if(k===i&&push)return;visto.add(i);i=k;visto.add(k);
+ S.forEach((s,n)=>{s.hidden=n!==i;s.classList.toggle('on',n===i)});
+ if(push)history.pushState({k},'','#paso-'+(i+1));
+ render();window.scrollTo({top:0});const h=S[i].querySelector('h1,h2');if(h)h.focus({preventScroll:true});
+ if(!keepAudio&&playing)play()}
+const au=new Audio();au.preload='none';let mp3=true;const syn=window.speechSynthesis;
+const LB=[$('hListen'),$('dListen')];
+function lbl(t,load){LB.forEach(b=>{b.textContent=t;b.classList.toggle('cargando',!!load);b.setAttribute('aria-busy',load?'true':'false')})}
+function voz(){if(!syn)return null;const v=syn.getVoices().filter(x=>/^es/i.test(x.lang));return v.find(x=>/jorge|raul|raúl|pablo|diego|alvaro|carlos|male|hombre/i.test(x.name))||v[0]||null}
+function next(){timer=setTimeout(()=>{if(playing&&i<N-1){go(i+1,true,true);play()}else stopA()},700)}
+function play(){playing=true;clearTimeout(loadT);clearTimeout(timer);au.pause();if(syn)syn.cancel();lbl('❚❚ Pausa');
+ if(mp3){au.src='audio/sec-'+String(i+1).padStart(2,'0')+'.mp3';loadT=setTimeout(()=>lbl('Cargando',true),1000);au.play().catch(()=>{});return}
+ if(syn){const u=new SpeechSynthesisUtterance(S[i].dataset.say);u.lang='es-MX';const v=voz();if(v)u.voice=v;u.onend=next;syn.speak(u)}else stopA()}
+au.addEventListener('playing',()=>{clearTimeout(loadT);lbl('❚❚ Pausa')});
+au.addEventListener('ended',next);
+au.addEventListener('error',()=>{if(!au.getAttribute('src'))return;clearTimeout(loadT);mp3=false;if(playing)play()});
+function stopA(){playing=false;clearTimeout(loadT);clearTimeout(timer);au.pause();if(syn)syn.cancel();lbl('▶ Escuchar')}
+function toggle(){playing?stopA():play()}
+LB.forEach(b=>b.onclick=toggle);
+$('dPrev').onclick=()=>go(i-1,true);$('dNext').onclick=()=>go(i+1,true);
+function openSheet(){render();history.pushState({sheet:1},'',location.hash);sheetPushed=true;sheet.showModal();const c=shL.querySelector('.actual button');if(c)c.focus()}
+function closeSheet(){if(sheetPushed)history.back();else{sheet.close();if(pending!==null){const p=pending;pending=null;go(p,true)}}}
+$('bPasos').onclick=openSheet;$('sClose').onclick=closeSheet;
+sheet.addEventListener('cancel',e=>{e.preventDefault();closeSheet()});
+sheet.addEventListener('click',e=>{if(e.target===sheet)closeSheet()});
+addEventListener('popstate',()=>{
+ if(sheet.open){sheet.close();sheetPushed=false;$('bPasos').focus();if(pending!==null){const p=pending;pending=null;stopA();go(p,true)}return}
+ const m=/paso-(\d+)/.exec(location.hash);go(m?+m[1]-1:0,false)});
+const root=document.documentElement,bt=$('bTema'),mq=matchMedia('(prefers-color-scheme: dark)');
+function oscuro(){return root.dataset.theme?root.dataset.theme==='dark':mq.matches}
+function pintaT(){const d=oscuro();bt.querySelector('span').textContent=d?'Modo claro':'Modo oscuro';bt.setAttribute('aria-label',d?'Cambiar a modo claro':'Cambiar a modo oscuro')}
+bt.onclick=()=>{root.dataset.theme=oscuro()?'light':'dark';pintaT()};
+if(mq.addEventListener)mq.addEventListener('change',pintaT);pintaT();
+addEventListener('keydown',e=>{if(sheet.open||e.altKey||e.ctrlKey||e.metaKey)return;const tg=e.target.closest&&e.target.closest('button,a,input,textarea,select,summary');
+ if(e.key==='ArrowRight')go(i+1,true);else if(e.key==='ArrowLeft')go(i-1,true);else if(e.key===' '&&!tg){e.preventDefault();toggle()}});
+let x0=null,y0=null;
+addEventListener('touchstart',e=>{if(sheet.open||e.touches.length>1){x0=null;return}x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
+addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;x0=null;if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.8)go(i+(dx<0?1:-1),true)},{passive:true});
+const m0=/paso-(\d+)/.exec(location.hash);i=m0?Math.max(0,Math.min(N-1,+m0[1]-1)):0;history.replaceState({k:i},'','#paso-'+(i+1));
+S.forEach((s,n)=>{s.hidden=n!==i;s.classList.toggle('on',n===i)});visto.add(i);render();
+window.scrollTo(0,0);addEventListener('load',()=>window.scrollTo(0,0));addEventListener('hashchange',()=>window.scrollTo(0,0));
+})();
+</script>
+<script src="rastreo.js" defer></script>
+</body>
+</html>
