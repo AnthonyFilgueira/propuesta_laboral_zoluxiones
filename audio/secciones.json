@@ -1,0 +1,72 @@
+[
+  {
+    "id": "sec-01",
+    "titulo": "Inicio",
+    "caracteres": 315,
+    "segundos": 23.0,
+    "hash": "61fadc41757d"
+  },
+  {
+    "id": "sec-02",
+    "titulo": "Encaje",
+    "caracteres": 534,
+    "segundos": 43.6,
+    "hash": "245864e3fc33"
+  },
+  {
+    "id": "sec-03",
+    "titulo": "Agentes de IA",
+    "caracteres": 389,
+    "segundos": 24.8,
+    "hash": "921ae9f7cb00"
+  },
+  {
+    "id": "sec-04",
+    "titulo": "IA en producción",
+    "caracteres": 309,
+    "segundos": 19.9,
+    "hash": "91a895222fec"
+  },
+  {
+    "id": "sec-05",
+    "titulo": "Interoperabilidad",
+    "caracteres": 364,
+    "segundos": 25.2,
+    "hash": "1eb5273df2a2"
+  },
+  {
+    "id": "sec-06",
+    "titulo": "Seguridad",
+    "caracteres": 311,
+    "segundos": 22.0,
+    "hash": "bd7dc1749c82"
+  },
+  {
+    "id": "sec-07",
+    "titulo": "Calidad",
+    "caracteres": 321,
+    "segundos": 22.3,
+    "hash": "fcea4fa8fbbc"
+  },
+  {
+    "id": "sec-08",
+    "titulo": "Tecnología nueva",
+    "caracteres": 320,
+    "segundos": 22.4,
+    "hash": "bb1e62927189"
+  },
+  {
+    "id": "sec-09",
+    "titulo": "Productos",
+    "caracteres": 784,
+    "segundos": 53.5,
+    "hash": "76ac900f70b3"
+  },
+  {
+    "id": "sec-10",
+    "titulo": "Cierre",
+    "caracteres": 171,
+    "segundos": 13.1,
+    "hash": "6628634eb567"
+  }
+]
